@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
@@ -38,11 +37,8 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/logout" element={<Logout />} />
-<<<<<<< HEAD
         <Route path="/profile" element={<Profile />} />
-=======
         <Route path="/admin" element={<Admin />} />
->>>>>>> 6bebf23b6b3a450719aeac46b06251371739830c
     </Routes>
       <Footer />
     </>

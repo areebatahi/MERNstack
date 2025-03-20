@@ -41,8 +41,8 @@ const Navigation = () => {
 
             {isAuthenticated ? (
               <>
-              <NavLink to="/Profile" text="Profile" />
-              <NavLink to="/logout" text="Logout" />
+                {/* <NavLink to="/profile" text="Profile" /> */}
+                <NavLink to="/logout" text="Logout" />
               </>
             ) : (
               <>
@@ -79,17 +79,26 @@ const Navigation = () => {
       </div>
 
       <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } sm:hidden bg-white shadow-md`}
+        className={`${isOpen ? "block" : "hidden"
+          } sm:hidden bg-white shadow-md`}
       >
         <div className="px-4 pt-2 pb-3 space-y-2">
           <NavLinkMobile to="/" text="Home" onClick={toggleMenu} />
           <NavLinkMobile to="/products" text="Products" onClick={toggleMenu} />
           <NavLinkMobile to="/about" text="About" onClick={toggleMenu} />
           <NavLinkMobile to="/contact" text="Contact" onClick={toggleMenu} />
-          <NavLinkMobile to="/signup" text="Sign Up" />
-          <NavLinkMobile to="/login" text="Login" />
+
+          {isAuthenticated ? (
+            <>
+              {/* <NavLinkMobile to="/profile" text="Profile" /> */}
+              <NavLinkMobile to="/logout" text="Logout" />
+            </>
+          ) : (
+            <>
+              <NavLinkMobile to="/signup" text="Sign Up" />
+              <NavLinkMobile to="/login" text="Login" />
+            </>
+          )}
         </div>
       </div>
     </nav>
