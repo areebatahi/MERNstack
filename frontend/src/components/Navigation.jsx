@@ -41,7 +41,7 @@ const Navigation = () => {
 
             {isAuthenticated ? (
               <>
-                {/* <NavLink to="/profile" text="Profile" /> */}
+                <NavLink to="/profile" text="Profile" />
                 <NavLink to="/logout" text="Logout" />
               </>
             ) : (
@@ -90,7 +90,7 @@ const Navigation = () => {
 
           {isAuthenticated ? (
             <>
-              {/* <NavLinkMobile to="/profile" text="Profile" /> */}
+              <NavLinkMobile to="/profile" text="Profile" />
               <NavLinkMobile to="/logout" text="Logout" />
             </>
           ) : (

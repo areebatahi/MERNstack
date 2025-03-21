@@ -29,6 +29,7 @@ const Profile = () => {
         const data = await response.json();
         if (response.ok) {
           setUser(data.user);
+          console.log(data.user)
         } else {
           toast.error(data.message || "Failed to fetch user details");
           navigate("/login");
@@ -70,6 +71,8 @@ const Profile = () => {
       const result = await response.json();
       if (response.ok) {
         console.log("User deleted:", result);
+      localStorage.removeItem('token');
+      localStorage.removeItem('userId');
         navigate("/signup");
       } else {
         toast.error(data.message || "Failed to delete user");
